@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Basic Party Package",
+    "event": "birthdays",
+    "price": 150,
+    "description": "Simple catering option with sandwiches, snacks and drinks."
+  },
+  {
+    "id": "2",
+    "name": "Family Feast Package",
+    "event": "family",
+    "price": 300,
+    "description": "Hot food buffet suitable for family gatherings."
+  },
+  {
+    "id": "3",
+    "name": "Wedding Premium Package",
+    "event": "weddings",
+    "price": 1000,
+    "description": "Full wedding catering including starter, main and dessert."
+  }
+]

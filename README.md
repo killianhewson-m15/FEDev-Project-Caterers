@@ -8,4 +8,5 @@ No code was generated. The project was created using the official SvelteKit CLI 
 ### AI assistance note - Version 1
 AI was used to help plan the basic page structure for the catering case study and suggest a simple SvelteKit layout/navigation setup.
 
-
+### AI assistance note - Version 2
+AI was used to suggest the structure of the JSON data file and demonstrate how to render it dynamically using a Svelte `{#each}` loop

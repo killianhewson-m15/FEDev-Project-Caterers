@@ -1,6 +1,22 @@
+<script>
+    import packages from '$lib/data/packages.json';
+</script>
+
 <h2>Catering Packages</h2>
 
-<p>
-    This page will show a list of catering packages.
-    Later, the package information will come from JSON data or a database.
-</p>
+{#each packages as pkg}
+    <div class="card">
+        <h3>{pkg.name}</h3>
+        <p>{pkg.description}</p>
+        <p><strong>Price:</strong> €{pkg.price}</p>
+    </div>
+{/each}
+
+<style>
+    .card {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+    }
+</style>
