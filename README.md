@@ -97,3 +97,8 @@ Files/features affected:
 These changes improved content quality, usability, and consistency, while strengthening the connection between dynamic data and user actions.
 
 
+### AI assistance note - Version 10
+
+No ai used, fixed issue where a user could submit a booking enquiry without logging in.
+
+

@@ -1,4 +1,5 @@
 import packages from '$lib/data/packages.json';
+import { redirect } from '@sveltejs/kit';
 
 export const actions = {
     default: async ({ request, cookies }) => {
@@ -10,6 +11,10 @@ export const actions = {
         const event = selectedPackage.event;
         const message = data.get('message');
         const username = cookies.get('username');
+
+        if (!username) {
+            throw redirect(303, '/login');
+        }
 
         let bookings = [];
 
