@@ -10,3 +10,6 @@ AI was used to help plan the basic page structure for the catering case study an
 
 ### AI assistance note - Version 2
 AI was used to suggest the structure of the JSON data file and demonstrate how to render it dynamically using a Svelte `{#each}` loop
+
+### AI assistance note - Version 3
+AI was used to help create a dynamic SvelteKit route for individual catering package pages and suggest the logic for finding the correct package from the JSON data.

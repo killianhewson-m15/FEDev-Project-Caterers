@@ -9,6 +9,7 @@
         <h3>{pkg.name}</h3>
         <p>{pkg.description}</p>
         <p><strong>Price:</strong> €{pkg.price}</p>
+        <a href="/packages/{pkg.id}">View details</a>
     </div>
 {/each}
 
