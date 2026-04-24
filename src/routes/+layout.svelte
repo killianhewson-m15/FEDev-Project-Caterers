@@ -13,6 +13,9 @@
 	<nav>
 		<a href="/">Home</a>
 		<a href="/my-bookings">My Bookings</a>
+		{#if data.role === 'admin'}
+			<a href="/admin-bookings">Admin Bookings</a>
+		{/if}
 		<a href="/about">About</a>
 		<a href="/packages">Packages</a>
 		<a href="/birthdays">Birthdays</a>

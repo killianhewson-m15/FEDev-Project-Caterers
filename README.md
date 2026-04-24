@@ -62,3 +62,14 @@ Files/features affected:
 - `src/routes/+layout.svelte`
 
 This builds on lecture concepts of cookies, form processing, and displaying dynamic data. Cookie storage is used at this stage so the feature works locally and when published, but a real database would be more suitable for a full production system.
+
+### AI assistance note - Version 8
+AI was used to help design an admin bookings page that uses the logged-in user's role cookie to decide whether all booking enquiries should be displayed.
+
+Files/features affected:
+- `src/routes/admin-bookings/+page.server.js`
+- `src/routes/admin-bookings/+page.svelte`
+- `src/routes/+layout.svelte`
+
+This builds on lecture concepts of cookies and dynamic Svelte `{#if}` rendering to demonstrate different user roles.
+
