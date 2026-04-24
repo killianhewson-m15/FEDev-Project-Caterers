@@ -5,4 +5,7 @@ AI was used to confirm the correct SvelteKit project setup steps and recommended
 
 No code was generated. The project was created using the official SvelteKit CLI and lecture guidance.
 
+### AI assistance note - Version 1
+AI was used to help plan the basic page structure for the catering case study and suggest a simple SvelteKit layout/navigation setup.
+
 
