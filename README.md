@@ -22,3 +22,17 @@ Files/features affected:
 - `src/routes/contact/+page.server.js`
 
 The implementation follows lecture examples of POST forms and extracting form data using `request.formData()`.
+
+### AI assistance note - Version 5
+AI was used to help structure a cookie-based login system, including handling form submission, storing user data in cookies, and reading cookies in the layout.
+
+AI was also used to suggest implementing logout by deleting cookies using a server route, and minor UI improvements for login/logout buttons.
+
+Files/features affected:
+- `src/routes/login/+page.svelte`
+- `src/routes/login/+page.server.js`
+- `src/routes/logout/+page.server.js`
+- `src/routes/+layout.server.js`
+- `src/routes/+layout.svelte`
+
+The implementation follows lecture concepts of form handling, cookies, and server-side processing.

@@ -1,7 +1,10 @@
 <script>
-	let { children } = $props();
+	let { children, data } = $props();
 
 	let siteName = 'Celebrate Catering';
+	let username = data.username;
+	let role = data.role;
+	let isLoggedIn = data.isLoggedIn;
 </script>
 
 <header>
@@ -16,6 +19,17 @@
 		<a href="/weddings">Weddings</a>
 		<a href="/contact">Contact</a>
 	</nav>
+
+	<div class="login-status">
+		{#if isLoggedIn}
+			<p>
+				Logged in as <strong>{username}</strong> ({role})
+				<a href="/logout" class="btn">Logout</a>
+			</p>
+		{:else}
+			<a href="/login" class="btn">Login</a>
+		{/if}
+	</div>
 </header>
 
 <main>
@@ -61,5 +75,23 @@
 		padding: 1rem;
 		text-align: center;
 		background-color: #eee;
+	}
+
+	.login-status {
+		margin-top: 1rem;
+	}
+
+	.btn {
+		background-color: #5d7b26;
+		color: white;
+		padding: 0.4rem 0.8rem;
+		margin-left: 1rem;
+		border-radius: 5px;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.btn:hover {
+		background-color: #a03a32;
 	}
 </style>
