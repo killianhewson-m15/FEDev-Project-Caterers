@@ -12,6 +12,7 @@
 
 	<nav>
 		<a href="/">Home</a>
+		<a href="/my-bookings">My Bookings</a>
 		<a href="/about">About</a>
 		<a href="/packages">Packages</a>
 		<a href="/birthdays">Birthdays</a>

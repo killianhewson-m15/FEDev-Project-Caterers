@@ -4,8 +4,12 @@
     let message = "(waiting for submission...)";
 
     if (form && form.success) {
-        message = "Thank you " + form.name +
-            ", your " + form.event + " enquiry has been received!";
+        message =
+            "Thank you " +
+            form.name +
+            ", your " +
+            form.event +
+            " enquiry has been received!";
     }
 </script>
 

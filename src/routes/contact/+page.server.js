@@ -1,5 +1,3 @@
-let bookings = []; // simple in-memory storage
-
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData();
@@ -7,10 +5,18 @@ export const actions = {
         const name = data.get('name');
         const event = data.get('event');
         const message = data.get('message');
-
         const username = cookies.get('username');
 
-        let booking = {
+        let bookings = [];
+
+        const savedBookings = cookies.get('bookings');
+
+        if (savedBookings) {
+            bookings = JSON.parse(savedBookings);
+        }
+
+        const booking = {
+            id: Date.now(),
             name,
             event,
             message,
@@ -18,6 +24,8 @@ export const actions = {
         };
 
         bookings.push(booking);
+
+        cookies.set('bookings', JSON.stringify(bookings), { path: '/' });
 
         return {
             success: true,

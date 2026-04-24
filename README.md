@@ -52,3 +52,13 @@ Files/features affected:
 
 The implementation builds on lecture concepts of cookies and form processing to create personalised data, with additional fixes for correct client-server state handling.
 
+### AI assistance note - Version 7
+AI was used to help create a My Bookings page that reads the logged-in user from cookies and displays only that user's booking enquiries.
+
+Files/features affected:
+- `src/routes/contact/+page.server.js`
+- `src/routes/my-bookings/+page.server.js`
+- `src/routes/my-bookings/+page.svelte`
+- `src/routes/+layout.svelte`
+
+This builds on lecture concepts of cookies, form processing, and displaying dynamic data. Cookie storage is used at this stage so the feature works locally and when published, but a real database would be more suitable for a full production system.
