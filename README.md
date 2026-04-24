@@ -13,3 +13,12 @@ AI was used to suggest the structure of the JSON data file and demonstrate how t
 
 ### AI assistance note - Version 3
 AI was used to help create a dynamic SvelteKit route for individual catering package pages and suggest the logic for finding the correct package from the JSON data.
+
+### AI assistance note - Version 4
+AI was used to help structure the booking enquiry form and demonstrate how to process form submissions using SvelteKit server actions.
+
+Files/features affected:
+- `src/routes/contact/+page.svelte`
+- `src/routes/contact/+page.server.js`
+
+The implementation follows lecture examples of POST forms and extracting form data using `request.formData()`.

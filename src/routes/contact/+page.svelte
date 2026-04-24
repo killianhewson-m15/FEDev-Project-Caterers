@@ -1,5 +1,42 @@
-<h2>Contact Us</h2>
+<script>
+    let { form } = $props();
 
-<p>
-    This page will later contain a booking enquiry form.
-</p>
+    let message = "(waiting for submission...)";
+
+    if (form && form.name) {
+        message = "Thank you " + form.name + ", your enquiry has been received!";
+    }
+</script>
+
+<h2>Booking Enquiry</h2>
+
+<p>{message}</p>
+
+<form method="POST">
+    <label>
+        Name:
+        <input name="name" required>
+    </label>
+
+    <br><br>
+
+    <label>
+        Event Type:
+        <select name="event">
+            <option value="birthday">Birthday</option>
+            <option value="family">Family Party</option>
+            <option value="wedding">Wedding</option>
+        </select>
+    </label>
+
+    <br><br>
+
+    <label>
+        Message:
+        <textarea name="message"></textarea>
+    </label>
+
+    <br><br>
+
+    <button>Submit Enquiry</button>
+</form>
