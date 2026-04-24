@@ -73,3 +73,27 @@ Files/features affected:
 
 This builds on lecture concepts of cookies and dynamic Svelte `{#if}` rendering to demonstrate different user roles.
 
+### AI assistance note - Version 9
+
+AI was used to suggest improvements to the overall website structure and usability. This included enhancing the home and about pages, expanding the event-specific pages (birthdays, family parties, weddings) with more detailed content and images, and improving layout and styling for better user experience.
+
+AI was also used to expand the catering package data and reorganise the packages page into clearer sections based on event type, using dynamic filtering and improved visual layout.
+
+Additionally, AI was used to improve the booking system by linking booking enquiries to a selected package. The separate event type selection was removed to avoid conflicting inputs, and the event type is now derived from the selected package data.
+
+Files/features affected:
+- `src/routes/+page.svelte`
+- `src/routes/about/+page.svelte`
+- `src/routes/birthdays/+page.svelte`
+- `src/routes/family-parties/+page.svelte`
+- `src/routes/weddings/+page.svelte`
+- `src/routes/packages/+page.svelte`
+- `src/lib/data/packages.json`
+- `src/routes/contact/+page.svelte`
+- `src/routes/contact/+page.server.js`
+- `src/routes/my-bookings/+page.svelte`
+- `src/routes/admin-bookings/+page.svelte`
+
+These changes improved content quality, usability, and consistency, while strengthening the connection between dynamic data and user actions.
+
+

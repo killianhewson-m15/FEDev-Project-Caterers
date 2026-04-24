@@ -1,23 +1,86 @@
 [
   {
     "id": "1",
-    "name": "Basic Party Package",
-    "event": "birthdays",
+    "name": "Kids Birthday Package",
+    "event": "Birthday",
     "price": 150,
-    "description": "Simple catering option with sandwiches, snacks and drinks."
+    "description": "Sandwiches, crisps, cupcakes, fruit, juice and simple party snacks for children."
   },
   {
     "id": "2",
-    "name": "Family Feast Package",
-    "event": "family",
-    "price": 300,
-    "description": "Hot food buffet suitable for family gatherings."
+    "name": "Teen Birthday Package",
+    "event": "Birthday",
+    "price": 220,
+    "description": "Pizza slices, chicken goujons, wedges, soft drinks and dessert bites."
   },
   {
     "id": "3",
-    "name": "Wedding Premium Package",
-    "event": "weddings",
-    "price": 1000,
-    "description": "Full wedding catering including starter, main and dessert."
+    "name": "Adult Birthday Buffet",
+    "event": "Birthday",
+    "price": 350,
+    "description": "Hot buffet with salads, wraps, finger food, desserts and tea or coffee."
+  },
+  {
+    "id": "4",
+    "name": "Milestone Birthday Package",
+    "event": "Birthday",
+    "price": 500,
+    "description": "A larger birthday package with hot food, desserts and upgraded presentation."
+  },
+  {
+    "id": "5",
+    "name": "Small Family Gathering",
+    "event": "Family Party",
+    "price": 250,
+    "description": "Simple buffet food for small family events such as communions or reunions."
+  },
+  {
+    "id": "6",
+    "name": "Family Hot Food Buffet",
+    "event": "Family Party",
+    "price": 420,
+    "description": "Hot dishes, salads, breads, desserts and drinks for mixed age groups."
+  },
+  {
+    "id": "7",
+    "name": "Anniversary Package",
+    "event": "Family Party",
+    "price": 550,
+    "description": "A more formal family package with starters, mains, desserts and tea or coffee."
+  },
+  {
+    "id": "8",
+    "name": "Large Family Celebration",
+    "event": "Family Party",
+    "price": 750,
+    "description": "A larger package for family celebrations with extra serving portions and menu choice."
+  },
+  {
+    "id": "9",
+    "name": "Wedding Buffet Package",
+    "event": "Wedding",
+    "price": 900,
+    "description": "Buffet-style wedding catering with hot and cold food options."
+  },
+  {
+    "id": "10",
+    "name": "Classic Wedding Meal",
+    "event": "Wedding",
+    "price": 1400,
+    "description": "Starter, main course, dessert and evening tea or coffee for wedding guests."
+  },
+  {
+    "id": "11",
+    "name": "Premium Wedding Package",
+    "event": "Wedding",
+    "price": 2200,
+    "description": "Full wedding catering with upgraded menu options and formal presentation."
+  },
+  {
+    "id": "12",
+    "name": "Evening Wedding Food",
+    "event": "Wedding",
+    "price": 650,
+    "description": "Evening food for wedding receptions, including finger food, snacks and desserts."
   }
 ]

@@ -68,10 +68,15 @@
 		font-weight: bold;
 	}
 
+	nav a:hover {
+		text-decoration: underline;
+	}
+
 	main {
 		padding: 1.5rem;
 		max-width: 1000px;
 		margin: auto;
+		min-height: 70vh;
 	}
 
 	footer {
@@ -86,8 +91,8 @@
 	}
 
 	.btn {
-		background-color: #5d7b26;
-		color: white;
+		background-color: white;
+		color: #7b2d26;
 		padding: 0.4rem 0.8rem;
 		margin-left: 1rem;
 		border-radius: 5px;
@@ -96,6 +101,6 @@
 	}
 
 	.btn:hover {
-		background-color: #a03a32;
+		background-color: #f3d7d2;
 	}
 </style>

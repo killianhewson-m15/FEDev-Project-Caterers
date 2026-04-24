@@ -1,9 +1,13 @@
+import packages from '$lib/data/packages.json';
+
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData();
 
         const name = data.get('name');
-        const event = data.get('event');
+        const packageName = data.get('packageName');
+        const selectedPackage = packages.find((pkg) => pkg.name === packageName);
+        const event = selectedPackage.event;
         const message = data.get('message');
         const username = cookies.get('username');
 
@@ -19,6 +23,7 @@ export const actions = {
             id: Date.now(),
             name,
             event,
+            packageName,
             message,
             user: username
         };
@@ -31,6 +36,7 @@ export const actions = {
             success: true,
             name,
             event,
+            packageName,
             message,
             username
         };

@@ -13,6 +13,7 @@
             <div class="card">
                 <h3>{booking.event}</h3>
                 <p><strong>Name:</strong> {booking.name}</p>
+                <p><strong>Package:</strong> {booking.packageName}</p>
                 <p><strong>User:</strong> {booking.user}</p>
                 <p><strong>Message:</strong> {booking.message}</p>
             </div>
