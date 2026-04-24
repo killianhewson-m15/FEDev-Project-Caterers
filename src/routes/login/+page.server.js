@@ -1,3 +1,5 @@
+import { redirect } from '@sveltejs/kit';
+
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData();
@@ -8,10 +10,6 @@ export const actions = {
         cookies.set('username', username, { path: '/' });
         cookies.set('role', role, { path: '/' });
 
-        return {
-            success: true,
-            username,
-            role
-        };
+        throw redirect(303, '/');
     }
 };

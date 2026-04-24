@@ -21,10 +21,10 @@
 	</nav>
 
 	<div class="login-status">
-		{#if isLoggedIn}
+		{#if data.isLoggedIn}
 			<p>
-				Logged in as <strong>{username}</strong> ({role})
-				<a href="/logout" class="btn">Logout</a>
+				Logged in as <strong>{data.username}</strong> ({data.role})
+				<a href="/logout" class="btn" data-sveltekit-reload>Logout</a>
 			</p>
 		{:else}
 			<a href="/login" class="btn">Login</a>

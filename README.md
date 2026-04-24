@@ -36,3 +36,19 @@ Files/features affected:
 - `src/routes/+layout.svelte`
 
 The implementation follows lecture concepts of form handling, cookies, and server-side processing.
+
+### AI assistance note - Version 6 (Bookings linked to user)
+
+AI was used to suggest how to associate booking submissions with a logged-in user by retrieving the username from cookies and attaching it to the booking data.
+
+AI was also used to help resolve issues with the login and logout flow. This included adding redirects after login/logout and using `data-sveltekit-reload` to ensure the UI updates correctly after cookies are changed.
+
+Files/features affected:
+- `src/routes/contact/+page.server.js`
+- `src/routes/contact/+page.svelte`
+- `src/routes/login/+page.server.js`
+- `src/routes/logout/+page.server.js`
+- `src/routes/+layout.svelte`
+
+The implementation builds on lecture concepts of cookies and form processing to create personalised data, with additional fixes for correct client-server state handling.
+
