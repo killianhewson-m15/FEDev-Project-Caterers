@@ -102,3 +102,9 @@ These changes improved content quality, usability, and consistency, while streng
 No ai used, fixed issue where a user could submit a booking enquiry without logging in.
 
 
+### AI assistance note - Version 11
+AI was used to help guide me through integrating a Turso database for storing users and booking enquiries.
+
+The login system now creates or updates users in the database, and booking submissions are stored in a bookings table instead of cookies. The My Bookings and Admin Bookings pages were updated to query the database.
+
+Cookies are still used to track the logged-in user, while Turso provides persistent storage for all data.

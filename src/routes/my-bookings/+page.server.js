@@ -1,17 +1,25 @@
-export function load({ cookies }) {
-    const username = cookies.get('username');
-    const savedBookings = cookies.get('bookings');
+import { db } from '$lib/server/db';
 
-    let bookings = [];
+export async function load({ cookies }) {
+    const userId = cookies.get('userId');
 
-    if (savedBookings) {
-        bookings = JSON.parse(savedBookings);
+    let myBookings = [];
+
+    if (userId) {
+        const result = await db.execute({
+            sql: `
+				SELECT name, event, package_name AS packageName, message
+				FROM bookings
+				WHERE user_id = ?
+				ORDER BY id DESC
+			`,
+            args: [userId]
+        });
+
+        myBookings = result.rows;
     }
 
-    const myBookings = bookings.filter((booking) => booking.user === username);
-
     return {
-        username,
         myBookings
     };
 }
