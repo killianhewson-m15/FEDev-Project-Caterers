@@ -131,3 +131,10 @@ Files/features affected:
 - `src/routes/register/+page.svelte`
 
 The changes added Google Fonts, clearer login/register navigation, consistent error message styling, and a stronger booking confirmation message after form submission.
+
+### AI assistance note - Svelte components refactor
+AI was used to refactor the packages page to use a reusable Svelte component.
+
+A `PackageCard` component was created in `src/lib/components/PackageCard.svelte` to display package information consistently. The packages page was updated to pass props explicitly to the component and group packages by event type.
+
+This reduces code duplication, improves maintainability, and demonstrates the use of Svelte components as required by the module.
