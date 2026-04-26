@@ -2,7 +2,7 @@
     let { form } = $props();
 </script>
 
-<h2>Login</h2>
+<h2>Register</h2>
 
 {#if form?.error}
     <p class="error">{form.error}</p>
@@ -23,10 +23,10 @@
 
     <br><br>
 
-    <button>Login</button>
+    <button>Register</button>
 </form>
 
-<p>Need an account? <a href="/register">Register</a></p>
+<p>Already have an account? <a href="/login">Login</a></p>
 
 <style>
     form {

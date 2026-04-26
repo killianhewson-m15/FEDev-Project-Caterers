@@ -108,3 +108,15 @@ AI was used to help guide me through integrating a Turso database for storing us
 The login system now creates or updates users in the database, and booking submissions are stored in a bookings table instead of cookies. The My Bookings and Admin Bookings pages were updated to query the database.
 
 Cookies are still used to track the logged-in user, while Turso provides persistent storage for all data.
+
+### AI assistance note - Version 12
+AI was used to help add a register page and improve the login system with password checking.
+
+Files/features affected:
+- `src/routes/register/+page.svelte`
+- `src/routes/register/+page.server.js`
+- `src/routes/login/+page.svelte`
+- `src/routes/login/+page.server.js`
+- `src/routes/+layout.svelte`
+
+The role selection was removed from the login form so users cannot choose to become admin. A fixed admin email is assigned the admin role server-side, while all other registered users become customers.

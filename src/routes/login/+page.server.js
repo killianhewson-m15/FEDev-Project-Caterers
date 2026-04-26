@@ -1,4 +1,4 @@
-import { redirect } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 
 export const actions = {
@@ -6,30 +6,30 @@ export const actions = {
         const data = await request.formData();
 
         const username = data.get('username');
-        const role = data.get('role');
+        const password = data.get('password');
 
-        // Insert user if not exists
-        await db.execute({
-            sql: `
-				INSERT INTO users (username, role)
-				VALUES (?, ?)
-				ON CONFLICT(username) DO UPDATE SET role = excluded.role
-			`,
-            args: [username, role]
-        });
-
-        // Get user ID
         const result = await db.execute({
-            sql: 'SELECT id FROM users WHERE username = ?',
+            sql: 'SELECT id, username, password, role FROM users WHERE username = ?',
             args: [username]
         });
 
-        const userId = result.rows[0].id;
+        if (result.rows.length === 0) {
+            return fail(400, {
+                error: 'No account found with that email.'
+            });
+        }
 
-        // Store in cookies
-        cookies.set('username', username, { path: '/' });
-        cookies.set('role', role, { path: '/' });
-        cookies.set('userId', String(userId), { path: '/' });
+        const user = result.rows[0];
+
+        if (user.password !== password) {
+            return fail(400, {
+                error: 'Incorrect password.'
+            });
+        }
+
+        cookies.set('username', user.username, { path: '/' });
+        cookies.set('role', user.role, { path: '/' });
+        cookies.set('userId', String(user.id), { path: '/' });
 
         throw redirect(303, '/');
     }

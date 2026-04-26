@@ -32,6 +32,7 @@
 			</p>
 		{:else}
 			<a href="/login" class="btn">Login</a>
+			<a href="/register" class="btn">Register</a>
 		{/if}
 	</div>
 </header>
