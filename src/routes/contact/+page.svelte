@@ -8,9 +8,9 @@
         message =
             "Thank you " +
             form.name +
-            ", your " +
-            form.event +
-            " enquiry has been received!";
+            ". Your enquiry for " +
+            form.packageName +
+            " has been received and saved.";
     }
 </script>
 

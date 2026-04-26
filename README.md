@@ -120,3 +120,14 @@ Files/features affected:
 - `src/routes/+layout.svelte`
 
 The role selection was removed from the login form so users cannot choose to become admin. A fixed admin email is assigned the admin role server-side, while all other registered users become customers.
+
+### AI assistance note - Quality and UX polish
+AI was used to suggest final quality and usability improvements based on the marking grid.
+
+Files/features affected:
+- `src/routes/+layout.svelte`
+- `src/routes/contact/+page.svelte`
+- `src/routes/login/+page.svelte`
+- `src/routes/register/+page.svelte`
+
+The changes added Google Fonts, clearer login/register navigation, consistent error message styling, and a stronger booking confirmation message after form submission.

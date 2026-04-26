@@ -1,3 +1,9 @@
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</svelte:head>
+
 <script>
 	let { children, data } = $props();
 
@@ -103,5 +109,17 @@
 
 	.btn:hover {
 		background-color: #f3d7d2;
+	}
+
+	:global(body) {
+		font-family: 'Open Sans', Arial, sans-serif;
+		margin: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: 'Merriweather', Georgia, serif;
 	}
 </style>

@@ -59,7 +59,11 @@
     }
 
     .error {
-        color: red;
+        color: #b00020;
         font-weight: bold;
+        background-color: #ffecec;
+        border: 1px solid #f5a5a5;
+        padding: 0.6rem;
+        border-radius: 5px;
     }
 </style>
