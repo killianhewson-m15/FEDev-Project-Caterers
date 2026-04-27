@@ -1,5 +1,17 @@
 # Front-End Project
 
+## Project Description
+
+This project is a SvelteKit web application for a catering business called Celebrate Catering. The site allows users to browse catering packages for different events such as birthdays, family parties, and weddings.
+
+Users can register and log in to the system, submit booking enquiries for specific catering packages, and view their own bookings. An admin user can view all booking enquiries submitted through the website.
+
+The application uses JSON data for package information and a Turso database to store user accounts and booking data. It demonstrates key frontend and backend concepts including routing, forms, cookies, authentication, and database integration.
+
+The website is designed with a consistent and user-friendly interface and is deployed using Vercel.
+
+fe-dev-project-caterers.vercel.app
+
 ### AI assistance note - Initial setup
 AI was used to confirm the correct SvelteKit project setup steps and recommended configuration options.
 
