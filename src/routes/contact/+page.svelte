@@ -7,6 +7,8 @@
 
 {#if form?.success}
     <p>Thank you {form.name}. Your enquiry for {form.packageName} has been received and saved.</p>
+{:else if form?.error}
+    <p class="error">{form.error}</p>
 {:else}
     <p>(waiting for submission...)</p>
 {/if}
@@ -14,7 +16,7 @@
 <form method="POST">
     <label>
         Name:
-        <input name="name" required>
+        <input name="name" maxlength="100" required>
     </label>
 
     <br><br>
@@ -32,7 +34,7 @@
 
     <label>
         Message:
-        <textarea name="message"></textarea>
+        <textarea name="message" maxlength="1000"></textarea>
     </label>
 
     <br><br>
@@ -78,5 +80,10 @@
 
     button:hover {
         background-color: #a03a32;
+    }
+
+    .error {
+        color: #b00020;
+        font-weight: bold;
     }
 </style>
