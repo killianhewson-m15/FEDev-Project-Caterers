@@ -1,5 +1,6 @@
 import { fail, redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
+import { hashPassword } from '$lib/server/password';
 
 const adminUsername = 'admin@celebratecatering.ie';
 
@@ -7,8 +8,12 @@ export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData();
 
-        const username = data.get('username');
-        const password = data.get('password');
+        const username = String(data.get('username') ?? '').trim().toLowerCase();
+        const password = String(data.get('password') ?? '');
+
+        if (password.length < 8) {
+            return fail(400, { error: 'Password must be at least 8 characters.' });
+        }
 
         const existing = await db.execute({
             sql: 'SELECT id FROM users WHERE username = ?',
@@ -28,7 +33,7 @@ export const actions = {
 				INSERT INTO users (username, password, role)
 				VALUES (?, ?, ?)
 			`,
-            args: [username, password, role]
+            args: [username, await hashPassword(password), role]
         });
 
         const result = await db.execute({

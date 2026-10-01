@@ -18,7 +18,7 @@
 
     <label>
         Password:
-        <input type="password" name="password" required>
+        <input type="password" name="password" minlength="8" required>
     </label>
 
     <br><br>
