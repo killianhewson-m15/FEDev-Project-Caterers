@@ -1,15 +1,12 @@
 <script>
     let { data } = $props();
-
-    let role = data.role;
-    let bookings = data.bookings;
 </script>
 
 <h2>Admin Bookings</h2>
 
-{#if role === 'admin'}
-    {#if bookings.length > 0}
-        {#each bookings as booking}
+{#if data.role === 'admin'}
+    {#if data.bookings.length > 0}
+        {#each data.bookings as booking}
             <div class="card">
                 <h3>{booking.event}</h3>
                 <p><strong>Name:</strong> {booking.name}</p>

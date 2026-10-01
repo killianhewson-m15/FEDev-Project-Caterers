@@ -1,17 +1,14 @@
 <script>
     let { data } = $props();
-
-    let username = data.username;
-    let myBookings = data.myBookings;
 </script>
 
 <h2>My Bookings</h2>
 
-{#if username}
-    <p>Bookings for: <strong>{username}</strong></p>
+{#if data.username}
+    <p>Bookings for: <strong>{data.username}</strong></p>
 
-    {#if myBookings.length > 0}
-        {#each myBookings as booking}
+    {#if data.myBookings.length > 0}
+        {#each data.myBookings as booking}
             <div class="card">
                 <h3>{booking.event}</h3>
                 <p><strong>Name:</strong> {booking.name}</p>

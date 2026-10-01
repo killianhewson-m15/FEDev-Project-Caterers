@@ -1,22 +1,15 @@
 <script>
     import packages from '$lib/data/packages.json';
     let { form } = $props();
-
-    let message = "(waiting for submission...)";
-
-    if (form && form.success) {
-        message =
-            "Thank you " +
-            form.name +
-            ". Your enquiry for " +
-            form.packageName +
-            " has been received and saved.";
-    }
 </script>
 
 <h2>Booking Enquiry</h2>
 
-<p>{message}</p>
+{#if form?.success}
+    <p>Thank you {form.name}. Your enquiry for {form.packageName} has been received and saved.</p>
+{:else}
+    <p>(waiting for submission...)</p>
+{/if}
 
 <form method="POST">
     <label>

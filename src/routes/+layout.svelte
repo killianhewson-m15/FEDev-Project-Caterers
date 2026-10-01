@@ -8,9 +8,6 @@
 	let { children, data } = $props();
 
 	let siteName = 'Celebrate Catering';
-	let username = data.username;
-	let role = data.role;
-	let isLoggedIn = data.isLoggedIn;
 </script>
 
 <header>
@@ -117,9 +114,9 @@
 	}
 
 	h1,
-	h2,
-	h3,
-	h4 {
+	:global(h2),
+	:global(h3),
+	:global(h4) {
 		font-family: 'Merriweather', Georgia, serif;
 	}
 </style>
